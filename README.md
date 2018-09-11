@@ -1,4 +1,4 @@
-A bot posting the Hacker News stories with 100+ points to [Mastodon](https://github.com/tootsuite/mastodon).
+A bot posting the Hacker News stories with certain points to [Mastodon](https://github.com/tootsuite/mastodon).
 
 https://toot.matereal.eu/@hackernews50
 
