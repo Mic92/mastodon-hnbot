@@ -1,6 +1,6 @@
 A bot posting the Hacker News stories with 100+ points to [Mastodon](https://github.com/tootsuite/mastodon).
 
-https://hackertribe.io/@HackerNewsBot
+https://toot.matereal.eu/@hackernews50
 
 ![](https://raw.githubusercontent.com/raymestalez/mastodon-hnbot/master/screenshot.png)
 
