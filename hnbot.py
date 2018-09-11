@@ -9,7 +9,7 @@ from mastodon import Mastodon
 
 
 class Db:
-    def __init__(self, points: int):
+    def __init__(self, points: int) -> None:
         self.handle = dbm.open("seen.db", "c")
         self.points = points
 
@@ -23,8 +23,9 @@ class Db:
     def hn_key(self, id) -> str:
         return f"hn{self.points}-{id}"
 
-    def __getitem__(self, key: str) -> Optional[Any]:
-        return self.handle.get(key, None)
+    def __getitem__(self, key: str) -> Optional[str]:
+        val = self.handle.get(key, None)
+        return val.decode("utf-8")
 
     def __setitem__(self, key: str, value: Any):
         self.handle[key] = value
@@ -106,8 +107,8 @@ def main() -> None:
 
         post = f"{title} {link}"
         print("Posting " + post)
-        db.mark_seen(storyid)
         mastodon.toot(post)
+        db.mark_seen(storyid)
 
 
 if __name__ == "__main__":
