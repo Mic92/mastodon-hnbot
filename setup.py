@@ -9,7 +9,7 @@ CLASSIFIERS = [
 ]
 
 setup(
-    name="hnbot",
+    name="mastodon-hnbot",
     version="1.0.0",
     classifiers=CLASSIFIERS,
     description="A bot posting HN-Articles to mastodon",

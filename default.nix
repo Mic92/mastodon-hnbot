@@ -47,7 +47,7 @@ let
     ];
   };
 in buildPythonApplication {
-  name = "hnbot";
+  name = "mastodon-hnbot";
   src = ./.;
   propagatedBuildInputs = [
     python3Packages.feedparser
