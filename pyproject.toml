@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mastodon-hnbot"
+version = "1.0.0"
+description = "A bot posting HN-Articles to mastodon"
+authors = [
+    {name = "Joerg Thalheim", email = "joerg@thalheim.io"},
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "feedparser",
+    "Mastodon.py",
+]
+
+[project.urls]
+Homepage = "https://github.com/Mic92/mastodon-hnbot"
+
+[project.scripts]
+hnbot = "hnbot:main"
+
+[tool.setuptools]
+py-modules = ["hnbot"]
+zip-safe = true
